@@ -1,0 +1,11 @@
+python-dateutil
+lxml
+python-jsonrpc
+pymongo
+pika
+redis
+requests
+sklearn
+pandas
+tensorflow
+watchdog
