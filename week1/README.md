@@ -3,6 +3,18 @@ Capstone_TapNews Project
 **Week1:**
 ```
 Aim:
+    start a config_service on port 4000. All the other services ask this service for
+their config information, serverhost, and serverport.
+
+What's been done:
+    config_service now hosts config information about: backend_server, news_recommendation_service, click_log_processor, and news_pipeline. 
+
+Where i stuck:
+    when i try to utilize web_server_rpc_client to call config_service, i only get response json file within the function. But out of the function scope, the json file cannot be read.
+
+____________________________________________________________________________________
+STUDY ABOUT NGINX
+Aim:
     add nginx.
 
 Default Ports:
