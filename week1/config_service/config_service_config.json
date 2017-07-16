@@ -1,0 +1,5 @@
+{
+    "NAME":"config_service",
+    "SERVER_HOST": "localhost",
+    "SERVER_PORT": 4000
+}

@@ -1,0 +1,45 @@
+{
+    "scrapers":
+    {
+        "GET_CNN_NEWS_XPATH" : "//p[@class='zn-body__paragraph speakable']//text() | //div[@class='zn-body__paragraph speakable']//text() | //div[@class='zn-body__paragraph']//text()"
+    },
+    "news_deduper":
+    {
+        "DEDUPE_NEWS_TASK_QUEUE_URL" : "amqp://wpdbirrx:je0cRxHuR7ly7nccyAEyKSsyOYpwJyO1@fish.rmq.cloudamqp.com/wpdbirrx",
+        "DEDUPE_NEWS_TASK_QUEUE_NAME" : "tap_news_dedupe_news_task_queue",
+        "SLEEP_TIME_IN_SECONDS" : 1
+    },
+    "news_fetcher":
+    {
+        "SLEEP_TIME_IN_SECONDS": 5,
+        "DEDUPE_NEWS_TASK_QUEUE_URL" : "amqp://wpdbirrx:je0cRxHuR7ly7nccyAEyKSsyOYpwJyO1@fish.rmq.cloudamqp.com/wpdbirrx",
+        "DEDUPE_NEWS_TASK_QUEUE_NAME" : "tap_news_dedupe_news_task_queue",
+        "SCRAPE_NEWS_TASK_QUEUE_URL" : "amqp://friznszh:lvQaHD79bBGldc6eHiQ1KHEC5EaXYgSl@fish.rmq.cloudamqp.com/friznszh",
+        "SCRAPE_NEWS_TASK_QUEUE_NAME" : "tap_news_scrape_news_task_queue"
+    },
+    "news_monitor":
+    {
+        "NEWS_SOURCES" : [
+        "bbc-news",
+        "bbc-sport",
+        "bloomberg",
+        "cnn",
+        "entertainment-weekly",
+        "espn",
+        "ign",
+        "techcrunch",
+        "the-new-york-times",
+        "the-wall-street-journal",
+        "the-washington-post"
+        ],
+
+        "REDIS_HOST" : "localhost",
+        "REDIS_PORT": 6379,
+
+        // set timeout as: 3600*24 * 1.
+        "NEWS_TIME_OUT_IN_SECONDS": 86400,
+        "SLEEP_TIME_IN_SECONDS" : 10,
+        "SCRAPE_NEWS_TASK_QUEUE_URL" : "amqp://friznszh:lvQaHD79bBGldc6eHiQ1KHEC5EaXYgSl@fish.rmq.cloudamqp.com/friznszh",
+        "SCRAPE_NEWS_TASK_QUEUE_NAME": "tap_news_scrape_news_task_queue"
+    }
+}

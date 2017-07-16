@@ -1,0 +1,14 @@
+{
+    "NAME": "backend_server",
+    "SERVER_HOST": "localhost",
+    "SERVER_PORT": 4040,
+    "REDIS_HOST": "localhost",
+    "REDIS_PORT": 6379,
+    "NEWS_TABLE_NAME": "news",
+    "CLICK_LOGS_TABLE_NAME": "click_logs",
+    "NEWS_LIMIT": 100,
+    "NEWS_LIST_BATCH_SIZE": 10,
+    "USER_NEWS_TIME_OUT_IN_SECONDS": 600,
+    "LOG_CLICKS_TASK_QUEUE_URL": "amqp://fmeqtoic:XcRlxzOaZL1iasFrVC1iPpS0ZgMrygjI@fish.rmq.cloudamqp.com/fmeqtoic",
+    "LOG_CLICKS_TASK_QUEUE_NAME": "tap_news_log_clicks_task_queue"
+}

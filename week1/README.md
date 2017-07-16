@@ -1,0 +1,39 @@
+Capstone_TapNews Project
+---
+**Week1:**
+```
+Aim:
+    add nginx.
+
+Default Ports:
+    nginx:8080
+
+How to run:
+    nginx
+    nginx -s stop
+    nginx -s reload
+    
+
+Problem encountered:
+    Q1. can't find nginx directories.
+    A1: "nginx -t" shows one the directory of nginx.conf. "vim nginx.conf", we can see in server{ root html}. since i used "brew" to install nginx, therefore, root html => root /usr/local/var/www. The reason is because this is where brew located. see Ref3 for details.
+
+    so in short:
+        nginx.conf is at: /usr/local/etc/nginx/nginx.conf
+        index.html is at: /usr/local/var/www/index.html
+
+    Q2: how to config nginx.conf?
+    A2: comment out the server{ } block. include a folder we wrote, with server{ } defined by ourseves. server { } has listen+port, server-name, root, and location.
+    Make sure the root folder has a index.html inside.
+              
+Useful commands to install tools:
+    brew install nginx
+
+Refs:
+https://stackoverflow.com/questions/19910042/locate-the-nginx-conf-file-my-nginx-is-actually-using
+
+https://stackoverflow.com/questions/11828270/how-to-exit-the-vim-editor
+
+https://stackoverflow.com/questions/10674867/nginx-default-public-www-location
+```
+
