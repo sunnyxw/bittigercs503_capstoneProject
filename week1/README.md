@@ -9,8 +9,12 @@ their config information, serverhost, and serverport.
 What's been done:
     Config_service now hosts config information about: backend_server, news_recommendation_service, click_log_processor, and news_pipeline. 
 
+    webServer, however, has a seperate config file within webserver folder.
+
 Where i stuck:
-    When i try to utilize web_server_rpc_client to call config_service, i only get response json file within the function. But out of the function scope, the json file cannot be read.
+    I intended to use the same config_service to config webServer as well. 
+    
+    However,When i try to utilize web_server_rpc_client to call config_service, i only get response json file within the function. But out of the function scope, the json file cannot be read.
 
 Merits:
     Now it's easier to modify config constants for all the services.
