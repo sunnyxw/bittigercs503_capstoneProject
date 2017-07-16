@@ -1,0 +1,6 @@
+{
+    "NAME":"news_recommendation_service",
+    "SERVER_HOST": "localhost",
+    "SERVER_PORT": 5050,
+    "PREFERENCE_MODEL_TABLE_NAME" : "user_preference_model"
+}

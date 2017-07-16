@@ -1,0 +1,10 @@
+{
+    "NAME":"click_log_processor",
+    "ALPHA" : 0.1,
+    // sleep time for cloudAMQP.
+    "SLEEP_TIME_IN_SECONDS" : 1,
+    "LOG_CLICKS_TASK_QUEUE_URL" : "amqp://fmeqtoic:XcRlxzOaZL1iasFrVC1iPpS0ZgMrygjI@fish.rmq.cloudamqp.com/fmeqtoic",
+    "LOG_CLICKS_TASK_QUEUE_NAME" : "tap_news_log_clicks_task_queue",
+    "PREFERENCE_MODEL_TABLE_NAME ": "user_preference_model",
+    "NEWS_TABLE_NAME" : "news"
+}

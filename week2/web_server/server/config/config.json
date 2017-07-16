@@ -1,0 +1,6 @@
+{
+    "mongoDbUri":"mongodb://test:test@ds058579.mlab.com:58579/cs503",
+    "jwtSecret": "Random String",
+    "SERVER_PORT": 4040,
+    "SERVER_HOST": "localhost"
+}
